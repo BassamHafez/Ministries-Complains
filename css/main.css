@@ -9,7 +9,10 @@ body{
     overflow-x: hidden;
     color: rgb(230, 230, 230);
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 ul li{
     list-style: none;
 }
@@ -191,4 +194,65 @@ footer{
 footer h5{
     font-size: 30px;
     color: #0c1a19;
+}
+
+
+/*--------------------------------- my profile------------------------------------------ */
+.my-profile-pic{
+ display: flex;
+ align-items: center;
+ margin-bottom: 40px;
+ padding: 5px 10px;
+ border: 1px solid #326C69;
+ border-radius: 30px;
+ background-color: #326C69;
+
+
+}
+.my-profile-pic img{
+    border-radius: 50%;
+    width: 60px;
+    border: 2px solid rgb(110, 110, 110);
+}
+.my-profile-pic h6{
+    font-size: 25px;
+    color: black;
+    font-weight: 700;
+    margin-left: 10px;
+    color: white;
+}
+.my-profile-info{
+    background-color: rgb(241, 238, 238);
+    padding: 15px 10px;
+    width: 30%;
+    height: 100vh;
+    border-radius: 0 50px 50px 0;
+}
+.info-faild{
+    padding: 20px 5px;
+}
+.info-faild label{
+    margin-bottom: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+}
+.info-faild div{
+    background-color: white;
+    border: 1px solid #326C69;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 15px 10px;
+    width: 80%;
+    color: rgb(44, 44, 44);
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-pen{
+    cursor: pointer;
+    color: #326C69;
+    font-size: 14px;
 }
