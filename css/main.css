@@ -172,7 +172,7 @@ header{
 .mini{
     background-color: rgb(255, 255, 255);
     padding: 1.25rem;
-    max-width: 20rem;
+    width: 320px;
     border-radius: 0.625rem;
     display: flex;
     flex-direction: column;
@@ -215,6 +215,7 @@ header{
     font-weight: 400;
     margin-top: 1.25rem;
     font-weight: 600;
+    display: block;
 }
 
 
