@@ -18,7 +18,7 @@ a{
 ul li{
     list-style: none;
 }
-button,input{
+button,input,textarea{
     outline: none;
     border: none;
 }
@@ -233,8 +233,13 @@ footer{
     font-size: 1.875rem;
     margin-inline:0.625rem;
     font-weight: 400;
+    cursor: pointer;
+    transition: all .3s;
 }
-    
+
+.fa-facebook:hover,.fa-twitter:hover,.fa-linkedin:hover,.fa-instagram:hover{
+    color: #22d6cd;
+}
 footer h5{
     font-size: 1.875rem;
     color: rgb(199, 199, 199);
@@ -677,6 +682,7 @@ button:hover{
       padding: 0.3125rem;
     }
 }
+
 @media screen and (max-width:330px) {
     .mini-img{
         width: 12.5rem;
