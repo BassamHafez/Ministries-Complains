@@ -9,49 +9,88 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body> 
+<body>
     <nav class="home-nav">
         <ul class="nav-links">
             <a href="index.html"> <li>Home</li></a>
-            <li>About</li>
+            <a href="about.html"><li>About</li></a>
             <li class="notifi">Notifications <span class="badge">1</span></li>
-            <li>Send Complaint</li>
+            <a href="complains.html"><li>Send Complaint</li></a>
         </ul>
+        <button class="nav-bars" id="barIcon"><i class="fa-solid fa-bars"></i></button>
         <div class="nav-login">
             <a href="profile.html"><i title="view profile" class="fa-solid fa-user"></i></a>
-            <button class="login-btn">Login</button>
+            <a href="login.html"><button class="login-btn">Login</button></a>
         </div>
+ 
     </nav>
-<div class="my-profile-container">
-    <div class="my-profile-info">
-        <div class="my-profile-pic">
-            <img src="./images/profile.jpg" alt="profile pic">
-            <h6>Bader Sami</h6>
-        </div>
-        <div class="info-faild">
-            <label for="Name">Name</label>
-            <div id="Name"><span>Bader Sami</span> <span title="ediet"><i class="fa-solid fa-pen"></i></span></div>
-        </div>
-        <div class="info-faild">
-            <label for="Email">Email</label>
-            <div id="Email"><span>BaderSami@gmail.com</span> <span title="ediet"><i class="fa-solid fa-pen"></i></span></div>
-        </div>
-        <div class="info-faild">
-            <label for="ID">Civil ID</label>
-            <div id="ID"><span>45356356474</span> <span title="ediet"><i class="fa-solid fa-pen"></i></span></div>
-        </div>
-        <div class="info-faild">
-            <label for="Address">Address</label>
-            <div id="Address"><span>Kuwait</span><span title="ediet"><i class="fa-solid fa-pen"></i></span></div>
-        </div>
-    </div>
-    <div>
 
+    <div class="my-profile-container">
+        <aside class="my-profile-info" id="myProfileInfo">
+            <button id="gearIcon"><i class="fa-solid fa-gear"></i></button>
+            <div class="my-profile-pic">
+                <img src="./images/profile.jpg" alt="profile pic">
+                <h6>Bader Sami</h6>
+            </div>
+            <div class="info-faild">
+                <label for="Name">Name</label>
+                <div id="Name"><span>Bader Sami</span> <span title="ediet"><i class="fa-solid fa-pen"></i></span></div>
+            </div>
+            <div class="info-faild">
+                <label for="Email">Email</label>
+                <div id="Email"><span>ex@gmail.com</span> <span title="ediet"><i
+                            class="fa-solid fa-pen"></i></span></div>
+            </div>
+            <div class="info-faild">
+                <label for="ID">Civil ID</label>
+                <div id="ID"><span>45356356474</span> <span title="ediet"><i class="fa-solid fa-pen"></i></span></div>
+            </div>
+            <div class="info-faild">
+                <label for="Address">Address</label>
+                <div id="Address"><span>Kuwait</span><span title="ediet"><i class="fa-solid fa-pen"></i></span></div>
+            </div>
+        </aside>  
+        <section class="my-complains-container">
+            <div class="title">
+                <h4>Your Complains</h4>
+            </div>
+            <div class="my-complains-content">
+                <div class="my-complains-title">
+                    <div class="left-side-complain"><h4>Status</h4></div>
+                    <div class="right-side-complain"><h4>Complains</h4></div>
+                </div>
+                <div class="my-complains">
+                    <div class="left-side-complain"><h6>قيد التنفيذ</h6></div>
+                    <div class="right-side-complain"><h6>عطل في الكاميرا</h6></div>
+
+                </div>
+                <div class="my-complains">
+                   <div class="left-side-complain"> <h6>تم حل المشكلة</h6></div>
+                   <div class="right-side-complain"><h6>كتب دراسية</h6></div>
+
+                </div>
+                <div class="my-complains">
+                    <div class="left-side-complain"><h6>جار التحقق من المشكلة</h6></div>
+                    <div class="right-side-complain"><h6>نظافة</h6></div>
+
+                </div>
+           
+            </div>
+        </section>
+        <div>
+
+        </div>
     </div>
+    <div class="responsive-sideBar" id="sideBar">
+        <ul class="responsive-sideBar-ul">
+            <a href="index.html"> <li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <li class="notifi">Notifications <span class="badge">1</span></li>
+            <a href="complains.html"><li>Send Complaint</li></a>
+            <a href="login.html"><button class="login-btn">Login</button></a>
+
+        </ul>
 </div>
-
-
-    
     <script src="js/all.min.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -1,30 +1,45 @@
-// Get the necessary elements
-var carousel = document.querySelector('.carousel');
-var prevButton = document.querySelector('.prev-button');
-var nextButton = document.querySelector('.next-button');
+let sideBar = document.getElementById("sideBar");
+let barIcon = document.getElementById("barIcon");
+let myProfileInfo = document.getElementById("myProfileInfo");
+let gearIcon = document.getElementById("gearIcon");
 
-// Initialize current slide and total slides
-var currentSlide = 0;
-var totalSlides = carousel.getElementsByClassName('carousel-img').length;
+let sideBarOpacityValue = '0';
+let myProfileInfoleftValue='-1';
 
-// Add click event listeners to the buttons
-prevButton.addEventListener('click', function() {
-  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-  updateCarousel();
+
+barIcon.addEventListener('click', function() {
+    sideBarOpacityValue = getComputedStyle(sideBar).opacity;
+    toggleSideBar(sideBarOpacityValue);
 });
 
-nextButton.addEventListener('click', function() {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  updateCarousel();
-});
-
-// Function to update the carousel display
-function updateCarousel() {
-  var slides = carousel.getElementsByClassName('carousel-img');
-
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].classList.remove('active');
-  }
-
-  slides[currentSlide].classList.add('active');
+function toggleSideBar(sideBarOpacityValue) {
+    if (sideBarOpacityValue === '0') {
+        sideBar.style.cssText = "left: 0; opacity: 1";
+    } else {
+        sideBar.style.cssText = "left: -150%; opacity: 0";
+    }
 }
+
+
+gearIcon.addEventListener('click', function() {
+    myProfileInfoleftValue = getComputedStyle(myProfileInfo).left;
+    togglemyProfileInfo(myProfileInfoleftValue);
+});
+
+function togglemyProfileInfo(myProfileInfoleftValue) {
+    if (myProfileInfoleftValue < '0') {
+        myProfileInfo.style.cssText = "left: 0;";
+    } else {
+        if (window.innerWidth <= 330) {
+            myProfileInfo.style.cssText = "left: -90%;";
+        } else {
+            myProfileInfo.style.cssText = "left: -300px;";
+        }
+    }
+}
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth <= 330) {
+      togglemyProfileInfo(myProfileInfoleftValue);
+    }
+  });

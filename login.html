@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav class="home-nav">
+        <ul class="nav-links">
+            <a href="index.html"> <li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <li class="notifi">Notifications <span class="badge">1</span></li>
+            <a href="complains.html"><li>Send Complaint</li></a>
+        </ul>
+        <button class="nav-bars" id="barIcon"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-login">
+            <a href="profile.html"><i title="view profile" class="fa-solid fa-user"></i></a>
+            <a href="register.html"><button class="login-btn">Register</button></a>
+        </div>
+ 
+    </nav>
+
+    <main class="login-page">
+        <form class="login-form">
+            <h4>Login</h4>
+            <div class="input-field">
+                <label for="id">Civil ID</label>
+                <input type="text" name="id" id="id" placeholder="12345678">
+            </div>
+            <div class="input-field">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="*********" >
+            </div>
+            <button>Login</button>
+            <div class="forget-password">
+                <a href="#">Forget Password</a>
+            </div>
+
+        </form>
+    </main>
+    <div class="responsive-sideBar" id="sideBar">
+        <ul class="responsive-sideBar-ul">
+            <a href="index.html"> <li>Home</li></a>
+            <a href="about.html"><li>About</li></a>
+            <li class="notifi">Notifications <span class="badge">1</span></li>
+            <a href="complains.html"><li>Send Complaint</li></a>
+            <a href="login.html"><button class="login-btn">Login</button></a>
+
+        </ul>
+</div>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
