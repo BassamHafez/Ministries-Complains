@@ -49,7 +49,19 @@ button,i{
     background-color: #326C69;
     color: white;
 }
-
+.active-link{
+    position: relative;
+}
+.active-link::after{
+    content: "";
+    width:65%;
+    height: 2px;
+    position: absolute;
+    bottom: -9%;
+    left: 50%;
+    transform: translate(-50%,9%);
+    background-color: #073836;
+}
 
 /*--------------------------------- Home--------------------------------------------------------- */
 
@@ -218,7 +230,10 @@ header{
     display: block;
 }
 
-
+.about-home{
+    background-color: #326c6938;
+    padding: 1.25rem 0;
+}
 
 /*--------------------------------- footer------------------------------------------ */
 footer{
@@ -574,10 +589,167 @@ footer p{
     margin: 0.625rem 0;
     padding: 0.3125rem;
 }
+
+/*---------------------------------complains------------------------------------------ */
+
+.sub-nav{
+    background-color: #326c69;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+.sub-nav h5{
+    font-size: 1.5625rem;
+    padding: 1.875rem 0;
+    color: rgba(197, 197, 197, 0.514);
+    text-align: center;
+}
+.sub-nav-active{
+   color: white !important;
+}
+.complaint-title{
+    padding: 1.25rem;
+    border-bottom: 0.0625rem solid rgb(192, 192, 192);
+    width: 60%;
+}
+.complaint-title h6{
+    font-size: 1.875rem;
+    color: #326C69;
+}
+.choose-mini,.choose-category,.choose-sub-category,.choose-city{
+    padding: 1.875rem;
+    display: flex;
+    align-items: center;
+}
+.complaint-label{
+    width: 11.25rem;
+    display: flex;
+    align-items: center;
+}
+.choose-mini label,.choose-category label,.choose-sub-category label,.choose-city label{
+    font-size: 1.125rem;
+    color: black;
+    font-weight: 600;
+}
+
+#option-select,#category-select,#subcategory-select,#cities{
+padding: 0.625rem;
+font-size: 1rem;
+border-radius: 0.625rem;
+width: 18.75rem;
+}
+.complaint-btns{
+    padding: 1.25rem;
+    border-top: 0.0625rem solid rgb(192, 192, 192);
+    text-align: end;
+}
+.complaint-btns button{
+padding: 0.625rem 0.9375rem;
+border-radius: 0.3125rem;
+border: 0.0625rem solid transparent;
+margin-inline: 1.25rem;
+min-width: 6.25rem;
+font-size: 1.125rem;
+transition: all .3s;
+
+}
+#next-choose-mini,#submit-choose-mini{
+    background-color: #326C69;
+    color:white;
+
+}
+#cancel-choose-mini,#prev-choose-mini{
+    color: #326C69;
+    border: 0.0625rem solid #326C69;
+    background-color: white;
+    
+}
+#next-choose-mini:hover #submit-choose-mini:hover{
+    background-color: #073836;
+}
+#cancel-choose-mini:hover #prev-choose-mini:hover{
+    background-color: #326C69;
+    color: white;
+}
+
+#complaintFirstSlide{
+    display: block;
+    min-height: 85vh;
+}
+#complaintSecondtSlide{
+    display: none;
+    min-height: 85vh;
+}
+
+.upload-container{
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+.upload-container label{
+    cursor: pointer;
+}
+.upload{
+    padding: 1.25rem 1.5625rem;
+    background-color: white;
+    border: 0.0625rem solid #326C69;
+    color: #326C69;
+    margin-inline: 1.875rem;
+    font-size: 1.125rem;
+    border-radius: 0.3125rem;
+} 
+.upload-container h5{
+    font-size: 1.125rem;
+    color: black;
+    margin-left: 0.5rem;
+}
+.upload-container input{
+ display: none;
+}
+#cities{
+    margin-inline: 1.25rem;
+}
+.complaint-desc{
+    padding-inline: 1.25rem;
+}
+#complaintDesc{
+    border: 0.0625rem solid #326C69;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+    width: 50%;
+    font-size: 1.125rem;
+}
+#option-select option,#cities option{
+    font-family:'Roboto', sans-serif;
+    text-align: start;
+}
+
+/*---------------------------------global------------------------------------------ */
 button:hover{
     background-color: transparent;
-    border: 1px solid #326C69;
+    border: 0.0625rem solid #326C69;
     color: #326C69;
+}
+select option{
+    font-size: 1rem;
+    font-family: 'Cairo', sans-serif;
+    padding-inline: 0.625rem;
+    text-align: end;
+}
+.header-option{
+    text-align: start !important;
+}
+/*---------------------------------media query------------------------------------------ */
+
+@media screen and (min-width:1200px) {
+    .mini{
+        width: 30%;
+    }
+    .mini-img{
+        min-width: 100%;
+    }
 }
 
 
@@ -616,6 +788,16 @@ button:hover{
     .my-complains-container{
         padding:0;
     }
+    .complaint-desc{
+        display: flex;
+        justify-content: center;
+    }
+    #complaintDesc{
+        width: 95%;
+    }
+    #cities{
+        width: 100%;
+    }
 }
 @media screen and (max-width:630px) {
     .my-complains div,.my-complains-title div{
@@ -650,21 +832,23 @@ button:hover{
   
 }
 
-@media screen and (max-width:415px){
-    .my-complains h6{
-        font-size: 0.875rem;
-    }
-    .my-complains div,.my-complains-title div{
-        font-size:0.9375rem;
-        height: 5.3125rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } 
-    .my-complains-container{
-        padding:0.3125rem;
-    }
+@media screen and (max-width:530px) {
+  .sub-nav h5{
+    font-size: 1rem;
+  }
+  .choose-mini,.choose-category,.choose-sub-category,.choose-city{
+    flex-direction: column;
+    align-items: start;
 }
+.choose-mini label,.choose-category label,.choose-sub-category label,.choose-city label{
+   margin-bottom: 10px;
+}
+.complaint-btns{
+    display: flex;
+    justify-content: center;
+}
+}
+
 
 @media screen and (max-width:430px) {
     header{
@@ -684,6 +868,49 @@ button:hover{
     }
 }
 
+@media screen and (max-width:415px){
+    .my-complains h6{
+        font-size: 0.875rem;
+    }
+    .my-complains div,.my-complains-title div{
+        font-size:0.9375rem;
+        height: 5.3125rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    .my-complains-container{
+        padding:0.3125rem;
+    }
+}
+@media screen and (max-width:360px) {
+    .mini-img{
+        width: 12.5rem;
+    }
+    .info-faild-content{
+       flex-direction:column;
+      align-items: center;
+     margin: 0;
+    }
+    .info-faild{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    #option-select,#category-select,#subcategory-select,#cities{
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        width:90%;
+    }
+    select option{
+        font-size: 0.75rem;
+        padding: 0;
+    }
+}
+
+
+
 @media screen and (max-width:330px) {
     .mini-img{
         width: 12.5rem;
@@ -691,6 +918,12 @@ button:hover{
     .my-profile-info{
         width: 90%;
     }
+}
+@media screen and (max-width:305px) {
+    .sub-nav h5{
+        font-size: 0.75rem;
+
+      }
 }
 
 @media screen and (max-width:265px) {
@@ -717,7 +950,7 @@ button:hover{
     .header-caption h2{
         font-size: 1.125rem;
     }
-   .mini-img{
+    .mini-img{
         width: 9.375rem;
     }
     .about-caption{
@@ -731,5 +964,12 @@ button:hover{
     }
     .my-profile-pic h6{
         font-size: 1rem;
+    }
+    .complaint-btns{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .complaint-btns button{
+        margin: 5px 0;
     }
 }

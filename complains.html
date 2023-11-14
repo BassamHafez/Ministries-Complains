@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misnistries|Complaint</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav class="home-nav">
+        <ul class="nav-links">
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="about.html">
+                <li>About</li>
+            </a>
+            <li class="notifi">Notifications <span class="badge">1</span></li>
+            <a href="complains.html" class="active-link">
+                <li>Send Complaint</li>
+            </a>
+        </ul>
+        <button class="nav-bars" id="barIcon"><i class="fa-solid fa-bars"></i></button>
+        <div class="nav-login">
+            <a href="profile.html"><i title="view profile" class="fa-solid fa-user"></i></a>
+            <a href="login.html"><button class="login-btn">Login</button></a>
+        </div>
+    </nav>
+
+
+    <main class="complaint-container">
+        <div class="choose-ministry-slides" id="complaintFirstSlide">
+            <div class="sub-nav">
+                <h5 class="sub-nav-active">1.Choose Ministry</h5>
+                <h5>2.Upload Complaint</h5>
+            </div>
+            <div class="complaint-title">
+                <h6>Ministries</h6>
+            </div>
+            <div class="choose-mini">
+                <div class="complaint-label">
+                    <label for="option-select">Select Ministry</label>
+                </div>
+                <select id="option-select">
+                    <option value="">Select</option>
+                    <option value="Environment">Ministry of Environment Water & Agriculture</option>
+                    <option value="Municipal">Ministry of Municipal Rural Affairs & Housing</option>
+                    <option value="Interior">Ministry of Interior</option>
+                    <option value="Health">Ministry of Health</option>
+                    <option value="Foreign">Ministry of Foreign Affairs</option>
+                    <option value="tourism">Ministry of tourism</option>
+                </select>
+            </div>
+
+            <div class="choose-category">
+                <div class="complaint-label">
+                    <label for="category-select">Select Category</label>
+                </div>
+                <select id="category-select">
+                    <option class="header-option" value="">Select</option>
+                </select>
+            </div>
+
+            <div class="choose-sub-category">
+                <div class="complaint-label">
+                    <label for="subcategory-select">Select Subcategory</label>
+                </div>
+                <select id="subcategory-select" class="subcategory-select">
+                    <option class="header-option" value="">Select</option>
+                </select>
+            </div>
+
+            <div class="complaint-btns">
+                <button id="cancel-choose-mini">Cancel</button>
+                <button id="next-choose-mini">Next</button>
+            </div>
+        </div>
+
+        <div id="complaintSecondtSlide">
+            <div class="sub-nav">
+                <h5>1.Choose Ministry</h5>
+                <h5 class="sub-nav-active">2.Upload Complaint</h5>
+            </div>
+            <div class="complaint-title">
+                <h6>Complaint Details</h6>
+            </div>
+            <div class="upload-complaint">
+                <div class="upload-container">
+                    <h5>Image Upload</h5>
+                    <label for="myImage">
+                        <div class="upload">
+                            <i class="fa-regular fa-image"></i>
+                        </div>
+                    </label>
+                    <input type="file" id="myImage" name="imageFile">
+                </div>
+                <div class="upload-container">
+                    <h5>Video Upload</h5>
+                    <label for="myVideo">
+                        <div class="upload">
+                            <i class="fa-solid fa-photo-film"></i>
+                        </div>
+                    </label>
+                    <input type="file" id="myVideo" name="videoFile">
+                </div>
+            </div>
+            <div class="choose-city">
+                <label for="cities">Select City</label>
+                <select name="cities" id="cities">
+                    <option value="">Select</option>
+                    <option value="Riyadh">Riyadh</option>
+                    <option value="Jeddah">Jeddah</option>
+                    <option value="Mecca">Mecca</option>
+                    <option value="Medina">Medina</option>
+                    <option value="Dammam">Dammam</option>
+                    <option value="Taif">Taif</option>
+                    <option value="Buraidah">Buraidah</option>
+                    <option value="Tabuk">Tabuk</option>
+                    <option value="Abha">Abha</option>
+                    <option value="Al-Khobar">Al-Khobar</option>
+                    <option value="Al-Ahsa">Al-Ahsa</option>
+                    <option value="Yanbu">Yanbu</option>
+                    <option value="Najran">Najran</option>
+                    <option value="Hail">Hail</option>
+                    <option value="Jubail">Jubail</option>
+                    <option value="Al-Mubarraz">Al-Mubarraz</option>
+                    <option value="Al-Kharj">Al-Kharj</option>
+                    <option value="Qatif">Qatif</option>
+                    <option value="Dhahran">Dhahran</option>
+                    <option value="Al-Jubail">Al-Jubail</option>
+                </select>
+            </div>
+            <div class="complaint-desc">
+                <textarea name="complaintDesc" id="complaintDesc" cols="30" rows="10" placeholder="write your description"></textarea>
+            </div>
+            <div class="complaint-btns">
+                <button id="prev-choose-mini">Prev</button>
+                <button type="submit" id="submit-choose-mini">Submit</button>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
