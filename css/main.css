@@ -43,6 +43,7 @@ button,i{
     color: #326C69;
     background-color: transparent;
     font-size: 1.25rem;
+    margin: auto;
 }
 
 .show-more button:hover{
@@ -227,7 +228,6 @@ header{
     font-weight: 400;
     margin-top: 1.25rem;
     font-weight: 600;
-    display: block;
 }
 
 .about-home{
@@ -369,6 +369,7 @@ footer p{
     padding: 0.9375rem ;
     border: 0.0625rem solid #326C69;
     border-radius: 0.625rem;
+    margin-bottom: 0.625rem;
 }
 .contact-us button{
     padding: 0.9375rem 3.125rem;
@@ -380,6 +381,8 @@ footer p{
     font-weight: 400;
     margin: 1.25rem 0;
     font-weight: 600;
+    display: block;
+    margin: auto;
 }
 /*--------------------------------- my profile------------------------------------------ */
 .my-profile-container{
