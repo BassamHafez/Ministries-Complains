@@ -1,6 +1,6 @@
 <h2>Ministries-Complaints in Kuwait</h2>
 <p><strong>Frontend Project</strong></p>
-<p>Welcome to the <strong>Ministries-Complaints in Kuwait</strong> GitHub repository! This platform provides Kuwaiti citizens a way to voice their concerns and complaints about ministries. Developed based on specific customer requests, it features essential pages like <strong>Home</strong>, <strong>Login</strong>, <strong>Register</strong>, <strong>About</strong>, <strong>Complaints</strong>, and <strong>Profile</strong>.</p>
+<p>This platform provides Kuwaiti citizens a way to voice their concerns and complaints about ministries. Developed based on specific customer requests, it features essential pages like <strong>Home</strong>, <strong>Login</strong>, <strong>Register</strong>, <strong>About</strong>, <strong>Complaints</strong>, and <strong>Profile</strong>.</p>
 
 <p>The goal of this project is to streamline the process of submitting complaints and to facilitate effective communication between citizens and the designated complaints teams. By addressing citizens’ concerns, this platform contributes to promoting transparency and accountability within the government.</p>
 
